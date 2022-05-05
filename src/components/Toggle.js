@@ -6,7 +6,10 @@ function Toggle() {
   function toggleButton(){
     setIsOn(()=> isOn = !isOn)
   }
-  return <button onClick={toggleButton}>{isOn ? "ON": "OFF"}</button>;
+
+  const color = isOn ? "red" : "white";
+
+  return <button onClick={toggleButton} style={{backgroundColor:color}}>{isOn ? "ON": "OFF"}</button>;
 }
 
 export default Toggle;
